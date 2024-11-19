@@ -23,6 +23,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image and push to github
 <<<<<<< HEAD
+<<<<<<< HEAD
       run: docker build . --file Containerfile --tag rhsa-monitor:latest
     - name: Tag image
       run: docker image tag rhsa-monitor:latest ghcr.io/backchristoffer/rhsa-monitor:latest
@@ -30,8 +31,15 @@ jobs:
       run: docker image push ghcr.io/backchristoffer/rhsa-monitor:latest
 =======
       run: docker build . --file Containerfile --tag RHSA-Monitor:latest
+=======
+      run: docker build . --file Containerfile --tag rhsa-monitor:latest
+>>>>>>> 6126b74 (fixed container build issue)
     - name: Tag image
-      run: docker image tag RHSA-Monitor:latest ghcr.io/backchristoffer/RHSA-Monitor:latest
+      run: docker image tag rhsa-monitor:latest ghcr.io/backchristoffer/rhsa-monitor:latest
     - name: Push image to github
+<<<<<<< HEAD
       run: docker image push ghcr.io/backchristoffer/RHSA-Monitor:latest
 >>>>>>> 7e9afae (boilerplate done)
+=======
+      run: docker image push ghcr.io/backchristoffer/rhsa-monitor:latest
+>>>>>>> 6126b74 (fixed container build issue)
