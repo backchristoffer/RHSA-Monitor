@@ -1,4 +1,5 @@
 package main
+<<<<<<< HEAD
 import (
 	"fmt"
 	"io"
@@ -15,3 +16,13 @@ func main() {
 		fmt.Println(err)
 	}
 	fmt.Printf("%s", body)
+=======
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("boilerplate")
+}
+>>>>>>> 7e9afae (boilerplate done)
