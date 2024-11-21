@@ -1,9 +1,7 @@
-
 package main
 
 import (
 	"fmt"
-<<<<<<< HEAD
 	"io"
 	"net/http"
 )
@@ -19,10 +17,4 @@ func main() {
 		fmt.Println(err)
 	}
 	fmt.Printf("%s", body)
-=======
-)
-
-func main() {
-	fmt.Println("boilerplate")
->>>>>>> 7e9afae (boilerplate done)
 }
