@@ -1,17 +1,15 @@
 name: build and push kmem-load-test
-
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v2
@@ -19,11 +17,10 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.SECRET }}
-        
     - uses: actions/checkout@v3
     - name: Build the Docker image and push to github
       run: docker build . --file Containerfile --tag rhsa-monitor:latest
     - name: Tag image
       run: docker image tag rhsa-monitor:latest ghcr.io/backchristoffer/rhsa-monitor:latest
     - name: Push image to github
-      run: docker image push ghcr.io/backchristoffer/rhsa-monitor:latest
+      run: docker image push ghcr.io/backchristoffer/RHSA-Monitor:latest
