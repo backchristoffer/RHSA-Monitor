@@ -1,26 +1,12 @@
 name: build and push kmem-load-test
-<<<<<<< HEAD
-=======
-
->>>>>>> 7e9afae (boilerplate done)
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-<<<<<<< HEAD
 jobs:
   build:
     runs-on: ubuntu-latest
-=======
-
-jobs:
-
-  build:
-
-    runs-on: ubuntu-latest
-
->>>>>>> 7e9afae (boilerplate done)
     steps:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v2
@@ -28,7 +14,6 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.SECRET }}
-<<<<<<< HEAD
     - uses: actions/checkout@v3
     - name: Build the Docker image and push to github
       run: docker build . --file Containerfile --tag rhsa-monitor:latest
@@ -36,18 +21,3 @@ jobs:
       run: docker image tag rhsa-monitor:latest ghcr.io/backchristoffer/rhsa-monitor:latest
     - name: Push image to github
       run: docker image push ghcr.io/backchristoffer/RHSA-Monitor:latest
-
-=======
-        
-    - uses: actions/checkout@v3
-    - name: Build the Docker image and push to github
-      run: docker build . --file Containerfile --tag rhsa-monitor:latest
-    - name: Tag image
-      run: docker image tag rhsa-monitor:latest ghcr.io/backchristoffer/rhsa-monitor:latest
-    - name: Push image to github
-<<<<<<< HEAD
-      run: docker image push ghcr.io/backchristoffer/RHSA-Monitor:latest
->>>>>>> 7e9afae (boilerplate done)
-=======
-      run: docker image push ghcr.io/backchristoffer/rhsa-monitor:latest
->>>>>>> 6126b74 (fixed container build issue)

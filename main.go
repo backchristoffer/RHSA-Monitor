@@ -1,10 +1,11 @@
 package main
-<<<<<<< HEAD
+
 import (
 	"fmt"
 	"io"
 	"net/http"
 )
+
 func main() {
 	resp, err := http.Get("https://access.redhat.com/hydra/rest/securitydata/cve.json?product=OpenShift%20Container%20Platform&severity=important")
 	if err != nil {
@@ -16,13 +17,4 @@ func main() {
 		fmt.Println(err)
 	}
 	fmt.Printf("%s", body)
-=======
-
-import (
-	"fmt"
-)
-
-func main() {
-	fmt.Println("boilerplate")
 }
->>>>>>> 7e9afae (boilerplate done)
