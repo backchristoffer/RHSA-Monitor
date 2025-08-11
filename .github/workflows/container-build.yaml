@@ -1,4 +1,4 @@
-name: build and push kmem-load-test
+name: build and push RHSA-Monitor
 on:
   push:
     branches: [ "main" ]
